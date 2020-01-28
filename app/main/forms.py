@@ -1,12 +1,11 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, SubmitField
-from wtforms.validators import DataRequired, Email, EqualTo
+from wtforms import SubmitField, StringField, PasswordField
+from wtforms.validators import DataRequired, EqualTo, Email
 
 
 class SignupForm(FlaskForm):
-    """Flask-WTF, fields for the signup form with validators"""
     name = StringField('Name', validators=[DataRequired()])
-    email = StringField('Email address', validators=[DataRequired(), Email()])
+    email = StringField('Email address', validators=[DataRequired(), Email(message='Valid email address required')])
     password = PasswordField('Password', validators=[DataRequired(), EqualTo('confirm', message='Passwords must match')])
     confirm = PasswordField('Repeat Password')
     submit = SubmitField('Sign Up')
