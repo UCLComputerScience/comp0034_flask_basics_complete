@@ -9,19 +9,19 @@ def populate_db():
     """
 
     if not Student.query.first():
-        s1 = Student(student_num="CS1234567", email='cs1234567@ucl.co.uk', password='test1pass')
-        s2 = Student(student_num="CS1234568", email="cs1234568@ucl.co.uk", password="test2pass")
-        s3 = Student(student_num="CS1234569", email="cs1234569@ucl.co.uk", password="test3pass")
-        s4 = Student(student_num="CS1234570", email="cs1234570@ucl.co.uk", password="test4pass")
-        s5 = Student(student_num="CS1234571", email="cs1234571@ucl.co.uk", password="test5pass")
-        s6 = Student(student_num="CS1234572", email="cs1234572@ucl.co.uk", password="test6pass")
+        s1 = Student(student_ref="CS1234567", email='cs1234567@ucl.co.uk', password='test1pass')
+        s2 = Student(student_ref="CS1234568", email="cs1234568@ucl.co.uk", password="test2pass")
+        s3 = Student(student_ref="CS1234569", email="cs1234569@ucl.co.uk", password="test3pass")
+        s4 = Student(student_ref="CS1234570", email="cs1234570@ucl.co.uk", password="test4pass")
+        s5 = Student(student_ref="CS1234571", email="cs1234571@ucl.co.uk", password="test5pass")
+        s6 = Student(student_ref="CS1234572", email="cs1234572@ucl.co.uk", password="test6pass")
 
-        t1 = Teacher(teacher_num="uclcs0002", title="Dr", first_name="Lewis", last_name="Baird")
-        t2 = Teacher(teacher_num="uclcs0006", title="Prof", first_name="Elif", last_name="Munro")
-        t3 = Teacher(teacher_num="uclcs0010", title="Ms", first_name="Aleyna", last_name="Bonilla")
-        t4 = Teacher(teacher_num="uclcs0072", title="Dr", first_name="Maximus", last_name="Tierney")
-        t5 = Teacher(teacher_num="uclcs0021", title="Dr", first_name="Marcelina", last_name="Mcclure")
-        t6 = Teacher(teacher_num="uclcs0132", title="Dr", first_name="Fei Hong", last_name="Zhou")
+        t1 = Teacher(teacher_ref="uclcs0002", title="Dr", first_name="Lewis", last_name="Baird")
+        t2 = Teacher(teacher_ref="uclcs0006", title="Prof", first_name="Elif", last_name="Munro")
+        t3 = Teacher(teacher_ref="uclcs0010", title="Ms", first_name="Aleyna", last_name="Bonilla")
+        t4 = Teacher(teacher_ref="uclcs0072", title="Dr", first_name="Maximus", last_name="Tierney")
+        t5 = Teacher(teacher_ref="uclcs0021", title="Dr", first_name="Marcelina", last_name="Mcclure")
+        t6 = Teacher(teacher_ref="uclcs0132", title="Dr", first_name="Fei Hong", last_name="Zhou")
 
         c1 = Course(course_code="COMP0015", name="Introduction to Programming")
         c2 = Course(course_code="COMP0034", name="Software Engineering")

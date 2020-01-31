@@ -3,7 +3,7 @@ from app import db
 
 class Student(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    student_num = db.Column(db.Integer, nullable=False)
+    student_ref = db.Column(db.Integer, nullable=False)
     email = db.Column(db.Text)
     password = db.Column(db.Text)
     grades = db.relationship('Grade', backref='students')
@@ -14,7 +14,7 @@ class Student(db.Model):
 
 class Teacher(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    teacher_num = db.Column(db.Text, nullable=False)
+    teacher_ref = db.Column(db.Text, nullable=False)
     title = db.Column(db.Text)
     first_name = db.Column(db.Text)
     last_name = db.Column(db.Text)
